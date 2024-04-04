@@ -14,10 +14,14 @@
 
 # [START cloudbuild_npm_node]
 steps:
+  # Initialize npm
+  - name: node
+    entrypoint: npm
+    args: ["init"]
   # Install dependencies
   - name: node
     entrypoint: npm
-    args: ["install"]
+    args: ["init"]
   # Run tests
   - name: node
     entrypoint: npm
