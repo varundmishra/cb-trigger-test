@@ -18,16 +18,20 @@ steps:
   - name: node
     entrypoint: npm
     args: ["init"]
+    dir: backend/
   # Install dependencies
   - name: node
     entrypoint: npm
-    args: ["init"]
+    args: ["install"]
+    dir: backend/
   # Run tests
   - name: node
     entrypoint: npm
     args: ["test"]
+    dir: backend/
   # Run custom commands
   - name: node
     entrypoint: npm
     args: ["run", "build"]
+    dir: backend/
 # [END cloudbuild_npm_node]
